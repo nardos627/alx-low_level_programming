@@ -1,6 +1,3 @@
-es (20 sloc)  286 Bytes
- 
-
 #include <stdio.h>
 
 /**
@@ -23,3 +20,4 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
+
