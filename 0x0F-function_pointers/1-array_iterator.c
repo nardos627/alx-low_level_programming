@@ -1,17 +1,23 @@
-#include <stddef.h>
-/* defines size_t */
+#include "function_pointers.h"
 
 /**
- * array_iterator - execute function on an array via a function ptr
- * @array: array
- * @size: size of array
- * @action: pointer to function that we need to execute
- */
+*array_iterator - executes a function on each element of an array
+*@array: array to be targeted
+*@size: size of array
+*@action: function to be executed
+*
+*/
+
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	size_t i; /* match data type */
 
-	if (array != NULL && action != NULL)
-		for (i = 0; i < size; i++)
-			action(*(array + i));
+if (array == NULL || action == NULL)
+return;
+
+while (size-- > 0)
+{
+action(*array);
+array++;
+}
+
 }
